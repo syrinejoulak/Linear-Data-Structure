@@ -1,0 +1,18 @@
+function getSumOfDistinct  (str1, str2) {
+var distinct = [];
+var myStr1 = str1.split(", ")
+var myStr2 = str2.split(", ")
+for (let i = 0; i <myStr1.length; i++) {
+if (myStr2.indexOf(myStr1[i]) == -1) {
+  distinct.push(Number(myStr1[i]))
+}
+  }
+  for (let j = 0; j < myStr2.length; j++)
+ if (myStr1.indexOf(myStr2[j]) == -1) {
+  distinct.push(Number(myStr2[j]))
+} 
+var sum = distinct.reduce(function(a, b){
+        return a + b;
+    }, 0);
+  return sum
+}
