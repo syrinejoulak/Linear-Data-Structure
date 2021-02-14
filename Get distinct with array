@@ -1,0 +1,16 @@
+function getSumOfDistinct (arr1, arr2) {
+  var distinct = []
+  for (let i = 0; i <arr1.length; i++) {
+if (arr2.indexOf(arr1[i]) == -1) {
+  distinct.push(arr1[i])
+}
+  }
+  for (let j = 0; j < arr2.length; j++)
+ if (arr1.indexOf(arr2[j]) == -1) {
+  distinct.push(arr2[j])
+} 
+var sum = distinct.reduce(function(a, b){
+        return a + b;
+    }, 0);
+  return sum
+}
